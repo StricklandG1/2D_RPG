@@ -27,7 +27,7 @@ public class PlayerStatus : MonoBehaviour
         if (!guarding && !isDead)
         {
             currentHealth -= damage;
-            health.UpdateBar(maxHealth, currentHealth);
+            health.UpdateBar(maxHealth, (currentHealth<0) ? 0 : currentHealth);
 
             Debug.Log("Player Health: " + currentHealth);
 
