@@ -13,11 +13,14 @@ public class ChasePlayer : MonoBehaviour
     PlayerStatus playerStatus;
     Animator monsterAnimator;
 
+    Vector3 startPosition;
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
         playerStatus = player.GetComponent<PlayerStatus>();
         monsterAnimator = GetComponent<Animator>();
+        startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     public void Chase()
@@ -37,6 +40,11 @@ public class ChasePlayer : MonoBehaviour
             {
                 attack.Attack();
                 monsterAnimator.SetBool("isMoving", false);
+            }
+            else if (transform.position != startPosition)
+            {
+                transform.localScale = new Vector2(Mathf.Sign(startPosition.x - transform.position.x) * xScale, transform.localScale.y);
+                transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
             }
             else
             {
