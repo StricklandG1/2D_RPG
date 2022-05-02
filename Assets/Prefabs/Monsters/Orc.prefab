@@ -204,7 +204,7 @@ MonoBehaviour:
   speed: 3
   maxRange: 4
   minRange: 0.25
-  xScale: 0.75
+  xScale: 0.9
   attack: {fileID: 3695713670385839157}
 --- !u!114 &3695713670385839157
 MonoBehaviour:

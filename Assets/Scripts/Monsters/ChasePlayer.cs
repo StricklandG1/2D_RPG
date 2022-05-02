@@ -12,6 +12,7 @@ public class ChasePlayer : MonoBehaviour
     GameObject player;
     PlayerStatus playerStatus;
     Animator monsterAnimator;
+    Rigidbody2D monsterRb; 
 
     Vector3 startPosition;
 
@@ -20,12 +21,12 @@ public class ChasePlayer : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerStatus = player.GetComponent<PlayerStatus>();
         monsterAnimator = GetComponent<Animator>();
+        monsterRb = GetComponent<Rigidbody2D>();
         startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     public void Chase()
     {
-        Debug.Log("Player Status: " + playerStatus.isDead);
         if (!playerStatus.isDead)
         {
             float distance = Vector2.Distance(transform.position, player.transform.position);
