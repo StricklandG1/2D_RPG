@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
+    [SerializeField] UIStats health;
     [SerializeField] float maxHealth;
     private float currentHealth;
+
+    [SerializeField] UIStats mana;
+    [SerializeField] float maxMana;
+    private float currentMana;
+
     BoxCollider2D playerCollider;
     Animator playerAnimator;
     SpriteRenderer playerRenderer;
-    [SerializeField] UIStats health;
+
 
     bool guarding = false; // State for player taking recent damage. I-frames
     public bool isDead = false;
@@ -17,6 +23,10 @@ public class PlayerStatus : MonoBehaviour
     {
         health.InitializeValues(maxHealth);
         currentHealth = maxHealth;
+
+        mana.InitializeValues(maxMana);
+        currentMana = maxMana;
+
         playerAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<BoxCollider2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
