@@ -57,6 +57,6 @@ TagManager:
   - name: Characters
     uniqueID: 3748502561
     locked: 0
-  - name: NonCollisionDecorations
+  - name: InFrontOfPlayer
     uniqueID: 1268339681
     locked: 0
