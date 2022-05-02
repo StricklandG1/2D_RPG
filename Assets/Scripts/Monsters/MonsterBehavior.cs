@@ -9,10 +9,12 @@ public class MonsterBehavior : MonoBehaviour
     
     bool canChase = true;
     Animator monsterAnimator;
+    Rigidbody2D monsterRb;
 
     private void Start()
     {
         monsterAnimator = GetComponent<Animator>();
+        monsterRb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -51,5 +53,6 @@ public class MonsterBehavior : MonoBehaviour
     void DisableChase()
     {
         canChase = false;
+        monsterRb.velocity = Vector2.zero;
     }
 }

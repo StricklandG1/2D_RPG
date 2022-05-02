@@ -33,24 +33,36 @@ public class ChasePlayer : MonoBehaviour
             if (distance <= maxRange && distance >= minRange)
             {
                 transform.localScale = new Vector2(Mathf.Sign(player.transform.position.x - transform.position.x) * xScale, transform.localScale.y);
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+
+                Vector2 direction = player.transform.position - transform.position;
+                monsterRb.velocity = direction.normalized * speed;
 
                 monsterAnimator.SetBool("isMoving", true);
             }
             else if (distance <= minRange)
             {
+                monsterRb.velocity = Vector2.zero;
                 attack.Attack();
                 monsterAnimator.SetBool("isMoving", false);
             }
-            else if (transform.position != startPosition)
+            else if (Vector2.Distance(transform.position, startPosition) > 1.0f)
             {
                 transform.localScale = new Vector2(Mathf.Sign(startPosition.x - transform.position.x) * xScale, transform.localScale.y);
-                transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+
+                Vector2 direction = startPosition - transform.position;
+                monsterRb.velocity = direction.normalized * speed;
             }
             else
             {
+                monsterRb.velocity = Vector2.zero;
                 monsterAnimator.SetBool("isMoving", false);
             }
+        }
+        else
+        {
+            monsterRb.velocity = Vector2.zero;
         }
     }
 }
