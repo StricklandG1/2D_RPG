@@ -27,18 +27,12 @@ public class ChasePlayer : MonoBehaviour
 
     public void Chase()
     {
-        if (!playerStatus.isDead)
+        if (!playerStatus.IsDead())
         {
             float distance = Vector2.Distance(transform.position, player.transform.position);
             if (distance <= maxRange && distance >= minRange)
             {
-                transform.localScale = new Vector2(Mathf.Sign(player.transform.position.x - transform.position.x) * xScale, transform.localScale.y);
-                //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-
-                Vector2 direction = player.transform.position - transform.position;
-                monsterRb.velocity = direction.normalized * speed;
-
-                monsterAnimator.SetBool("isMoving", true);
+                MoveTowardsPlayer();
             }
             else if (distance <= minRange)
             {
@@ -48,11 +42,7 @@ public class ChasePlayer : MonoBehaviour
             }
             else if (Vector2.Distance(transform.position, startPosition) > 1.0f)
             {
-                transform.localScale = new Vector2(Mathf.Sign(startPosition.x - transform.position.x) * xScale, transform.localScale.y);
-                //transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
-
-                Vector2 direction = startPosition - transform.position;
-                monsterRb.velocity = direction.normalized * speed;
+                GoHome();
             }
             else
             {
@@ -64,5 +54,24 @@ public class ChasePlayer : MonoBehaviour
         {
             monsterRb.velocity = Vector2.zero;
         }
+    }
+
+    private void MoveTowardsPlayer()
+    {   
+        Vector2 direction = player.transform.position - transform.position;
+        monsterRb.velocity = direction.normalized * speed;
+
+        transform.localScale = new Vector2(Mathf.Sign(monsterRb.velocity.x) * xScale, transform.localScale.y);
+
+        monsterAnimator.SetBool("isMoving", true);
+    }
+
+    // Monster returns to starting position
+    private void GoHome()
+    {
+        Vector2 direction = startPosition - transform.position;
+        monsterRb.velocity = direction.normalized * speed;
+
+        transform.localScale = new Vector2(Mathf.Sign(monsterRb.velocity.x) * xScale, transform.localScale.y);
     }
 }

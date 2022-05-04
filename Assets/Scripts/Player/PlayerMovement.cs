@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * speed, moveInput.y * speed);
         
         playerRb.velocity = playerVelocity;
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y / 100.0f);
         FlipSprite();
     }
 

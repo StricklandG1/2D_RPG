@@ -249,7 +249,6 @@ MonoBehaviour:
   maxHealth: 10
   mana: {fileID: 0}
   maxMana: 5
-  isDead: 0
 --- !u!1 &8995087150564689099
 GameObject:
   m_ObjectHideFlags: 0

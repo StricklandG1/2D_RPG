@@ -18,7 +18,7 @@ public class PlayerStatus : MonoBehaviour
 
 
     bool guarding = false; // State for player taking recent damage. I-frames
-    public bool isDead = false;
+     bool isDead = false;
     void Start()
     {
         health.InitializeValues(maxHealth);
@@ -52,6 +52,10 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
+    public bool IsDead()
+    {
+        return isDead;
+    }
     void StartGuarding()
     {
         guarding = true;
