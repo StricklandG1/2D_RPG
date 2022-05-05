@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Room : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject virtualCam1;
+    [SerializeField] CinemachineStateDrivenCamera virtualCam;
     //[SerializeField] GameObject virtualCam2;
 
 
@@ -13,8 +14,7 @@ public class Room : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            virtualCam1.SetActive(true);
-            //virtualCam2.SetActive(true);
+            virtualCam.Priority = 10;
             Debug.Log(gameObject.name + " enabled");
         }
     }
@@ -23,9 +23,7 @@ public class Room : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-
-            virtualCam1.SetActive(false);
-            //virtualCam2.SetActive(false);
+            virtualCam.Priority = 0;
             Debug.Log(gameObject.name + " disable");
         }
     }
