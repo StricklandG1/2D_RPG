@@ -213,9 +213,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 1173608201}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 1058745269}
-  - {fileID: 1335540656}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: -1057510677
     m_VirtualCamera: {fileID: 1058745269}
@@ -763,9 +761,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 1173608201}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 1787938570}
-  - {fileID: 704780627}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: -1057510677
     m_VirtualCamera: {fileID: 1787938570}
@@ -11378,8 +11374,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -12, y: -8, z: 0}
-  m_Size: {x: 46, y: 33, z: 1}
+  m_Origin: {x: -15, y: -8, z: 0}
+  m_Size: {x: 49, y: 33, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -11995,6 +11991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 417493580}
+  monsters:
+  - {fileID: 1763447939}
 --- !u!1 &898163001
 GameObject:
   m_ObjectHideFlags: 3
@@ -12467,7 +12465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084189176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3522799, y: 0.19127665, z: -10.153099}
+  m_LocalPosition: {x: 17.46339, y: 0.19127665, z: -10.153099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13245,6 +13243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2813268995203677031, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5164465549286377088, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -13255,11 +13257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5164465549286377088, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.09
+      value: 7.47
       objectReference: {fileID: 0}
     - target: {fileID: 5164465549286377088, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 5164465549286377088, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13345,6 +13347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 1260083769}
+  monsters: []
 --- !u!60 &1544751671
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13714,6 +13717,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1763447939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2813268995203677031, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
+  m_PrefabInstance: {fileID: 1461687582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b679ebf07237a1d479f2a409b9bc54f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1787938568
 GameObject:
   m_ObjectHideFlags: 0
@@ -16880,6 +16894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 307447678}
+  monsters: []
 --- !u!60 &2016986671
 PolygonCollider2D:
   m_ObjectHideFlags: 0

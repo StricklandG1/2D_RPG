@@ -26,7 +26,7 @@ public class Sword : Weapon
     {
         if (collision.tag == "Enemy")
         {
-            MonsterBehavior enemy = collision.GetComponent<MonsterBehavior>();
+            Monster enemy = collision.GetComponent<Monster>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);

@@ -2,19 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBehavior : MonoBehaviour
+public class Monster : MonoBehaviour
 {
-    [SerializeField] float health;
+    [SerializeField] float maxHealth;
     [SerializeField] ChasePlayer chase;
-    
+    float health;
     bool canChase = true;
+
     Animator monsterAnimator;
     Rigidbody2D monsterRb;
+    BoxCollider2D monsterBoxCollider;
 
+    Vector3 startPos;
     private void Start()
     {
+        health = maxHealth;
+        startPos = transform.position;
         monsterAnimator = GetComponent<Animator>();
         monsterRb = GetComponent<Rigidbody2D>();
+        monsterBoxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -27,7 +33,7 @@ public class MonsterBehavior : MonoBehaviour
 
     void Death()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void TakeDamage(float damage)
@@ -38,7 +44,7 @@ public class MonsterBehavior : MonoBehaviour
         {
             Debug.Log("Enemy killed");
             monsterAnimator.SetBool("Dead", true);
-            GetComponent<BoxCollider2D>().enabled = false;
+            monsterBoxCollider.enabled = false;
             Invoke("Death", 3.0f);
         }
         monsterAnimator.SetBool("isMoving", false);
@@ -54,5 +60,22 @@ public class MonsterBehavior : MonoBehaviour
     {
         canChase = false;
         monsterRb.velocity = Vector2.zero;
+    }
+
+    // Called by Room script when player enters a room
+    public void Activate()
+    {
+        health = maxHealth;
+        canChase = true;
+        monsterBoxCollider.enabled = true;
+        gameObject.SetActive(true);
+    }
+
+    public void Deactivate()
+    {
+        transform.position = new Vector3(startPos.x, startPos.y, startPos.z);
+        monsterRb.velocity = Vector2.zero;
+        monsterAnimator.SetBool("isMoving", false);
+        gameObject.SetActive(false);
     }
 }

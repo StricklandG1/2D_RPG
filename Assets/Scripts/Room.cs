@@ -5,10 +5,8 @@ using Cinemachine;
 
 public class Room : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] CinemachineStateDrivenCamera virtualCam;
-    //[SerializeField] GameObject virtualCam2;
-
+    [SerializeField] Monster[] monsters;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +14,11 @@ public class Room : MonoBehaviour
         {
             virtualCam.Priority = 10;
             Debug.Log(gameObject.name + " enabled");
+            int len = monsters.Length;
+            for (int i = 0; i < len; i++)
+            {
+                monsters[i].Activate();
+            }
         }
     }
 
@@ -25,6 +28,11 @@ public class Room : MonoBehaviour
         {
             virtualCam.Priority = 0;
             Debug.Log(gameObject.name + " disable");
+            int len = monsters.Length;
+            for (int i = 0; i < len; i++)
+            {
+                monsters[i].Deactivate();
+            }
         }
     }
 }
