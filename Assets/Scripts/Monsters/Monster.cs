@@ -42,24 +42,31 @@ public class Monster : MonoBehaviour
         Debug.Log("Enemy Health: " + health);
         if (health <= 0)
         {
+            DisableChase();
             Debug.Log("Enemy killed");
             monsterAnimator.SetBool("Dead", true);
             monsterBoxCollider.enabled = false;
             Invoke("Death", 3.0f);
         }
-        monsterAnimator.SetBool("isMoving", false);
-        monsterAnimator.SetTrigger("Damaged");
+        else
+        {
+            monsterAnimator.SetBool("isMoving", false);
+            monsterAnimator.SetTrigger("Damaged");
+        }
     }
 
     void EnableChase()
     {
+        monsterAnimator.SetBool("isMoving", false);
         canChase = true;
+        Debug.Log("Chase enabled");
     }
 
     void DisableChase()
     {
         canChase = false;
         monsterRb.velocity = Vector2.zero;
+        Debug.Log("Chase disabled");
     }
 
     // Called by Room script when player enters a room
@@ -71,6 +78,7 @@ public class Monster : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    // Called by Room script when player leaves a room
     public void Deactivate()
     {
         transform.position = new Vector3(startPos.x, startPos.y, startPos.z);

@@ -6,7 +6,7 @@ public class Sword : Weapon
 {
     [SerializeField] float damage;
     PolygonCollider2D weaponCollider;
-    // Start is called before the first frame update
+
     void Start()
     {
         weaponCollider = GetComponent<PolygonCollider2D>();

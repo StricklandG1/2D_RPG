@@ -19,10 +19,10 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0
-      value: {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
     - time: 0.083333336
-      value: {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+      value: {fileID: -1338399621, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - time: 0.33333334
+      value: {fileID: 629157059, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
-    - {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+    - {fileID: -1338399621, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: 629157059, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -70,28 +70,28 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: DeactivateInput
+    functionName: DisableChase
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: startAttack
+  - time: 0.083333336
+    functionName: StartAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.16666667
-    functionName: ActivateInput
+  - time: 0.33333334
+    functionName: StopAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.16666667
-    functionName: stopAttack
+  - time: 0.33333334
+    functionName: EnableChase
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

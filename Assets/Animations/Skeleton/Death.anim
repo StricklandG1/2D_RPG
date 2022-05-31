@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: Death
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+      value: {fileID: 1698089207, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
     - time: 0.083333336
-      value: {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+      value: {fileID: 1667449318, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - time: 0.16666667
+      value: {fileID: 1509110949, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - time: 0.25
+      value: {fileID: 1037898652, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - time: 0.33333334
+      value: {fileID: -1353642985, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - time: 0.41666666
+      value: {fileID: -1698006958, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +50,18 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
-    - {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+    - {fileID: 1698089207, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: 1667449318, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: 1509110949, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: 1037898652, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: -1353642985, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: -1698006958, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -68,32 +80,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: DeactivateInput
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: startAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.16666667
-    functionName: ActivateInput
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.16666667
-    functionName: stopAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6324473920842625729}
   - component: {fileID: 3695713670385839157}
   m_Layer: 7
-  m_Name: Orc
+  m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: -546464735
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 288130574, guid: a9c5f4b03793c6242b566c7bfb94efa4, type: 3}
+  m_Sprite: {fileID: -311683251, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,8 +105,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13484049, y: 0}
-  m_Size: {x: 0.49049443, y: 1.25}
+  m_Offset: {x: -0.112669736, y: 0.013302883}
+  m_Size: {x: 0.31312838, y: 1.1169767}
   m_Direction: 0
 --- !u!61 &6431554464240531099
 BoxCollider2D:
@@ -121,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13114607, y: -0.5449034}
+  m_Offset: {x: -0.12190825, y: -0.50499594}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1.25}
+    oldSize: {x: 0.875, y: 1.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32794714, y: 0.1601932}
+  m_Size: {x: 0.2577396, y: 0.08037853}
   m_EdgeRadius: 0
 --- !u!50 &414628371367811460
 Rigidbody2D:
@@ -165,7 +165,7 @@ Animator:
   m_GameObject: {fileID: 5396536221538724447}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c0d436b527a5f514f9f5cdd6ea89c6a1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 69dd17f954a65514d87aaec8be7d84f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b679ebf07237a1d479f2a409b9bc54f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 5
   chase: {fileID: 6324473920842625729}
 --- !u!114 &6324473920842625729
 MonoBehaviour:
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 1585380869102517740}
-  attackCD: 2
+  attackCD: 3
 --- !u!1 &6993155635308434517
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 6975217717839824698}
   - component: {fileID: 1585380869102517740}
   m_Layer: 7
-  m_Name: Axe
+  m_Name: Bone
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,11 +278,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4734752, y: 0.692783}
-      - {x: 0.24528293, y: 0.57557297}
-      - {x: 0.27603722, y: -0.28945872}
-      - {x: 0.6311572, y: -0.2939765}
-      - {x: 0.6221533, y: 0.37226766}
+    - - {x: 0.270013, y: 0.67469746}
+      - {x: 0.10210569, y: 0.5213164}
+      - {x: 0.16677052, y: 0.017995209}
+      - {x: 0.60101473, y: 0.022520185}
+      - {x: 0.44129798, y: 0.4220029}
 --- !u!114 &1585380869102517740
 MonoBehaviour:
   m_ObjectHideFlags: 0

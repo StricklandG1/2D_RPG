@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: Damage
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+      value: {fileID: 804596596, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
     - time: 0.083333336
-      value: {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+      value: {fileID: -1569764979, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 697313247, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
-    - {fileID: -1649085452, guid: 937fad1c42caf534d9f108668e90af5c, type: 3}
+    - {fileID: 804596596, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
+    - {fileID: -1569764979, guid: 8216eb8d46678d94ab44b69505147f1e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -70,28 +70,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: DeactivateInput
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: startAttack
+    functionName: DisableChase
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.16666667
-    functionName: ActivateInput
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.16666667
-    functionName: stopAttack
+    functionName: EnableChase
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
