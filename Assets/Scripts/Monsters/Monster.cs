@@ -40,6 +40,7 @@ public class Monster : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Enemy Health: " + health);
+        monsterAnimator.SetBool("isMoving", false);
         if (health <= 0)
         {
             DisableChase();
@@ -50,14 +51,12 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            monsterAnimator.SetBool("isMoving", false);
             monsterAnimator.SetTrigger("Damaged");
         }
     }
 
     void EnableChase()
     {
-        monsterAnimator.SetBool("isMoving", false);
         canChase = true;
         Debug.Log("Chase enabled");
     }
