@@ -9,6 +9,7 @@ public class MonsterAttack : MonoBehaviour
     float attackTimer;
     bool canAttack = false;
     Animator monsterAnimator;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -28,6 +29,7 @@ public class MonsterAttack : MonoBehaviour
             }
         }
     }
+
     public void Attack()
     {
         if (canAttack)

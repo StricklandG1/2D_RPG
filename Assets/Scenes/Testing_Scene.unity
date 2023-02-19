@@ -12376,10 +12376,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 6324473920842625729, guid: 16389a7cebcc9a7429b3644c8d7a614d, type: 3}
-      propertyPath: minRange
-      value: 0.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16389a7cebcc9a7429b3644c8d7a614d, type: 3}
 --- !u!4 &1081688841 stripped
@@ -13861,10 +13857,6 @@ PrefabInstance:
     - target: {fileID: 5396536221538724447, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
       propertyPath: m_Name
       value: Orc
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324473920842625729, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
-      propertyPath: minRange
-      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}

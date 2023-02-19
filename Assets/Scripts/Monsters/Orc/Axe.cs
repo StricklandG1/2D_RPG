@@ -11,6 +11,7 @@ public class Axe : Weapon
     {
         weapon = GetComponent<PolygonCollider2D>();
     }
+
     public override void StartAttack()
     {
         weapon.enabled = true;
