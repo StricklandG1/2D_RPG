@@ -13858,6 +13858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc
       objectReference: {fileID: 0}
+    - target: {fileID: 6975217717839824698, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4949abf05c7ef104bacf6cf510767168, type: 3}
 --- !u!4 &1746750937 stripped
